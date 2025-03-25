@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Search Bar -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search products"
+        android:iconifiedByDefault="false"
+        android:elevation="4dp"
+        android:background="@android:color/white"
+        android:visibility="gone"/>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:scrollbars="vertical" />
+    <LinearLayout
+        android:id="@+id/Button_Cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary">
+
+        <Button
+            android:id="@+id/clearBasketButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear Basket"
+            android:background="@drawable/button_shape"
+            android:drawableStart="@drawable/ic_delete_black_24dp"
+            android:drawablePadding="8dp"
+            android:layout_gravity="start"
+            android:visibility="gone" />
+        <!-- Total Cost -->
+        <TextView
+            android:id="@+id/textViewTotalCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="end"
+            android:padding="16dp"
+            android:text="Total Cost: 0.00 $"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <!-- Εικόνα Προϊόντος, έξω από το TableLayout -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16dp" />
+
+    <!-- TableLayout για Κείμενα και Επιλογές -->
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Πρώτη Γραμμή με Όνομα Προϊόντος -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Product Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"
+                android:ellipsize="end"
+                android:maxLines="1" />
+        </TableRow>
+
+        <!-- Δεύτερη Γραμμή με Τιμή (κενή στήλη και Τιμή) -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/textViewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price: 0.00 $"
+                android:textSize="14sp"
+                android:layout_gravity="end"
+                android:paddingStart="16dp" />
+        </TableRow>
+
+        <!-- Τρίτη Γραμμή (κενή στήλη) -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textViewEmptyRow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <!-- Τέταρτη Γραμμή με Έκπτωση και Τελική Τιμή -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textViewDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discount: 0.00 $"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_red_light"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/textViewFinalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Final Price: 0.00 $"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:layout_gravity="end" />
+        </TableRow>
+
+        <!-- Επιλογές Καλαθιού (Virtual Basket) -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+            <LinearLayout
+                android:id="@+id/Virtual_Basket_Option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/buttonPlus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_shape"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/buttonMinus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_shape"
+                    android:layout_marginEnd="8dp" />
+
+                <EditText
+                    android:id="@+id/editTextQuantity"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="20sp"
+                    android:text="0"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>

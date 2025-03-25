@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/Your_Basket_Option">
+
+    <fragment
+        android:id="@+id/Your_Basket_Option"
+        android:name="com.example.smart_basket_app.Your_Basket_Fragment"
+        android:label="Your Basket"
+        tools:layout="@layout/fragment_your__basket_" />
+    <fragment
+        android:id="@+id/Virtual_Basket_Option"
+        android:name="com.example.smart_basket_app.Virtual_Basket_Fragment"
+        android:label="Virtual Basket"
+        tools:layout="@layout/fragment_virtual__basket_" />
+    <fragment
+        android:id="@+id/Products_Option"
+        android:name="com.example.smart_basket_app.Products_Fragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_products_" />
+    <fragment
+        android:id="@+id/Offers_Option"
+        android:name="com.example.smart_basket_app.Offers_Fragment"
+        android:label="Offers"
+        tools:layout="@layout/fragment_offers_" />
+    <fragment
+        android:id="@+id/Support_Option"
+        android:name="com.example.smart_basket_app.Support_Fragment"
+        android:label="Support"
+        tools:layout="@layout/fragment_support_" />
+    <fragment
+        android:id="@+id/menuAboutUs"
+        android:name="com.example.smart_basket_app.About_Us_Fragment"
+        android:label="About Us"
+        tools:layout="@layout/fragment_about__us_" />
+</navigation>
